@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aye Chan Moe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Aye Chan Moe</h1>
+        <p>YOU, US, OUR PAST, OUR PRESENT, OUR FUTURE</p>
+    </header>
+
+    <nav>
+        <a href="#" data-tab="tab1">You</a>
+        <a href="#" data-tab="tab2">Us</a>
+        <a href="#" data-tab="tab3">Our past</a>
+        <a href="#" data-tab="tab4">Our present</a>
+        <a href="#" data-tab="tab5">Our future</a>
+    </nav>
+
+    <div id="tab1" class="tab-content active">
+        <h2>YOU</h2>
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="photo1.jpg" alt="">
+                <p>The best girl ever!</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo2.jpg" alt="">
+                <p>My cutie Loveeee</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo3.jpg" alt="">
+                <p>My baabeee <3</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo4.jpg" alt="">
+                <p>My future wife</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <h2>US</h2>
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="photo5.jpg" alt="">
+                <p>I love you very much!</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo6.jpg" alt="">
+                <p>You and me babe</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo7.jpg" alt="">
+                <p>We are always together-forever</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo8.jpg" alt="">
+                <p>Just the two of us</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab3" class="tab-content">
+        <h2>OUR PAST</h2>
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="photo9.jpg" alt="">
+                <p>8 july the best day ever. The day when it was started and the day when you became my girlfriend!</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo10.jpg" alt="">
+                <p>You was with me at my birthday and wished me the best things, i appreciate it very much and i love you the most.</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo11.jpg" alt="">
+                <p>My first surpise to you and i gave you my heart and that moment. My heart is forever yours!</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo12.jpg" alt="">
+                <p>I sent to you a parcel. This parcel is full with love and warm. You will recieve at soon and wear my hoodie, hug our toy, eat sweeties and read the letter. I love you so much my everything</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab4" class="tab-content">
+        <h2>OUR PRESENT</h2>
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="photo13.jpg" alt="">
+                <p>We love each other the most and always need each other!</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo14.jpg" alt="">
+                <p>We always share everything with each other</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo15.jpg" alt="">
+                <p>We are always helping each other <3</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo16.jpg" alt="">
+                <p>We don't hide anything from each other</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab5" class="tab-content">
+        <h2>OUR FUTURE</h2>
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="photo17.jpg" alt="">
+                <p>I will fly to you at 21 March 2025 and we will have the best days ever!</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo18.jpg" alt="">
+                <p>It's us watching El-Clasico at Camp Nou in Barcelona uniform and loving each other</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo19.jpg" alt="">
+                <p>It's our future wedding babe, i love you my wife</p>
+            </div>
+            <div class="photo-item">
+                <img src="photo20.jpg" alt="">
+                <p>Our future baby</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Aye Chan Moe. All right saved.</p>
+    </footer>
+
+    <script>
+        const links = document.querySelectorAll('nav a');
+        const contents = document.querySelectorAll('.tab-content');
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // Удаляем активные классы
+                links.forEach(link => link.classList.remove('active'));
+                contents.forEach(content => content.classList.remove('active'));
+
+                // Добавляем активный класс к текущей вкладке
+                const tabId = link.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

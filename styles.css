@@ -1,0 +1,121 @@
+/* Подключение шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap'); /* Шрифт с каллиграфией */
+
+/* Общие стили */
+body {
+    font-family: 'Dancing Script', cursive; /* Каллиграфный шрифт */
+    background-color: #fce8f2; /* Очень светлый розовый фон */
+    color: #3c3c3c; /* Темно-серый текст для контраста */
+    margin: 0;
+    padding: 0;
+    line-height: 1.8; /* Увеличенное межстрочное расстояние для легкости восприятия */
+}
+
+header {
+    background-color: #ff80bf; /* Яркий розовый фон */
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 5px solid #ff3399; /* Розовая линия внизу */
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive; /* Каллиграфный шрифт для заголовков */
+    font-size: 3.5em;
+    margin: 0;
+    letter-spacing: 2px; /* Расстояние между буквами для большей выразительности */
+    background: linear-gradient(45deg, #ff3399, #ff66cc, #ff80bf); /* Градиент розового цвета */
+    -webkit-background-clip: text; /* Применение градиента к тексту */
+    color: transparent; /* Скрытие обычного цвета */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 0 0 25px rgba(255, 255, 255, 0.5); /* Тени для создания объема */
+    -webkit-text-stroke: 1px #ff3399; /* Обводка текста розовым цветом */
+}
+
+p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-align: justify; /* Выравнивание текста по ширине для литературного вида */
+    background: linear-gradient(45deg, #ff3399, #ff66cc, #ff80bf); /* Градиент для текста */
+    -webkit-background-clip: text; /* Применение градиента к тексту */
+    color: transparent; /* Скрытие обычного цвета */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15), 0 0 10px rgba(255, 255, 255, 0.3); /* Тени для создания объема */
+}
+
+/* Навигация */
+nav {
+    background-color: #ff66cc; /* Насыщенный розовый цвет для навигации */
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.3em;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background-color: #ff4d94; /* Яркая кнопка */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ff1a66; /* При наведении на ссылку */
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+nav a.active {
+    background-color: #ff3385; /* Активная вкладка */
+}
+
+/* Контент вкладок */
+.tab-content {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Georgia', serif; /* Более строгий шрифт для текста в контенте */
+    color: #4b4b4b;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Фото-галерея */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.photo-item {
+    background-color: #fff;
+    border: 3px solid #ff3399; /* Розовая рамка вокруг фото */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-item:hover {
+    transform: scale(1.05); /* Легкое увеличение фотографии при наведении */
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-item p {
+    padding: 15px;
+    background-color: #fff;
+    color: #333;
+    font-size: 1.1em;
+    font-family: 'Dancing Script', cursive; /* Каллиграфный шрифт для текста рядом с фото */
+    background: linear-gradient(45deg, #ff3399, #ff66cc, #ff80bf); /* Градиент для текста */
+    -webkit-background-clip: text; /* Применение градиента к тексту */
+    color: transparent; /* Скрытие обычного цвета */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 255, 0.2); /* Тени для создания объема */
+}
